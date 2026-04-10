@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Bloom Beauty | Cosmetics Store – Shopify Concept Theme</title>
+    <title>Bloom & Co. | Luxe Cosmetics – Shopify Concept Theme</title>
     <!-- Google Fonts & Font Awesome 6 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -22,16 +22,15 @@
             scroll-behavior: smooth;
         }
 
-        /* Fresh Color Theme: Soft Peach, Dusty Rose, Sage, Cream */
+        /* Premium Color Scheme: Soft Blush, Deep Rose, Gold, Cream */
         :root {
-            --soft-peach: #FDE9E1;
-            --dusty-rose: #C88A7A;
-            --sage-green: #B6C9B0;
-            --warm-cream: #FFF5EF;
-            --deep-cocoa: #5E3A35;
-            --golden-sand: #E4C4A8;
+            --blush-light: #FCE8E4;
+            --rose-deep: #B25D4A;
+            --gold-sand: #E2C7A2;
+            --cream-bg: #FFF8F4;
+            --charcoal-soft: #3D2E2A;
             --shadow-card: 0 20px 30px -12px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 25px 35px -12px rgba(94, 58, 53, 0.15);
+            --shadow-hover: 0 25px 35px -12px rgba(178, 93, 74, 0.2);
         }
 
         /* --- ANIMATIONS --- */
@@ -47,20 +46,24 @@
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
         }
-        @keyframes floatSoft {
+        @keyframes floatGentle {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
+            50% { transform: translateY(-6px); }
             100% { transform: translateY(0px); }
         }
-        @keyframes pulseWa {
+        @keyframes pulseWA {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
             70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
 
         /* announcement bars */
         .announce-top {
-            background: var(--dusty-rose);
+            background: var(--rose-deep);
             color: white;
             padding: 10px 16px;
             overflow: hidden;
@@ -75,7 +78,7 @@
             padding-left: 100%;
         }
         .announce-second {
-            background: var(--sage-green);
+            background: var(--gold-sand);
             color: #2D2A2A;
             text-align: center;
             padding: 8px 12px;
@@ -83,13 +86,13 @@
             font-weight: 600;
         }
 
-        /* FIXED NAVBAR — fully responsive */
+        /* Sticky Navbar - fully responsive */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0.8rem 5%;
-            background: rgba(255, 245, 239, 0.98);
+            background: rgba(255, 248, 244, 0.98);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
@@ -98,13 +101,12 @@
             flex-wrap: wrap;
         }
         .logo h1 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--deep-cocoa), #b27063);
+            background: linear-gradient(135deg, var(--rose-deep), #c47a64);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: -0.3px;
         }
         .nav-links {
             display: flex;
@@ -116,28 +118,27 @@
         }
         .nav-links a {
             text-decoration: none;
-            color: var(--deep-cocoa);
+            color: var(--charcoal-soft);
             transition: 0.2s;
-            white-space: nowrap;
         }
-        .nav-links a:hover { color: var(--dusty-rose); }
+        .nav-links a:hover { color: var(--rose-deep); }
         .cart-icon {
             font-size: 1.2rem;
-            color: var(--deep-cocoa);
-            background: var(--soft-peach);
-            padding: 8px 12px;
+            background: var(--blush-light);
+            padding: 8px 14px;
             border-radius: 40px;
             cursor: default;
+            color: var(--rose-deep);
         }
 
-        /* Hero section */
+        /* Hero Section with your image */
         .hero {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
             padding: 2rem 5% 3rem;
-            background: linear-gradient(115deg, #FFF2EB, #FFFAF5);
+            background: linear-gradient(115deg, #FEF3EE, #FFF9F5);
             gap: 2rem;
         }
         .hero-text {
@@ -146,18 +147,17 @@
             animation: fadeUp 0.7s ease;
         }
         .hero-text h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
             line-height: 1.2;
-            color: var(--deep-cocoa);
+            color: var(--rose-deep);
         }
         .hero-text p {
             margin: 1rem 0 1.5rem;
-            color: #6E5550;
-            font-size: 1rem;
+            color: #6E4E45;
         }
         .btn-primary {
-            background: var(--dusty-rose);
+            background: var(--rose-deep);
             border: none;
             padding: 12px 28px;
             color: white;
@@ -165,9 +165,9 @@
             border-radius: 60px;
             cursor: pointer;
             transition: 0.2s;
-            box-shadow: 0 4px 12px rgba(200, 138, 122, 0.3);
+            box-shadow: 0 4px 12px rgba(178, 93, 74, 0.3);
         }
-        .btn-primary:hover { background: #aa6e5e; transform: scale(1.02); }
+        .btn-primary:hover { background: #944c3d; transform: scale(1.02); }
         .hero-image {
             flex: 1;
             text-align: center;
@@ -178,7 +178,7 @@
             border-radius: 42px;
             box-shadow: var(--shadow-card);
             width: 100%;
-            max-width: 500px;
+            max-width: 550px;
             height: auto;
             object-fit: cover;
         }
@@ -200,10 +200,10 @@
         }
         .feature i {
             font-size: 1.8rem;
-            background: var(--soft-peach);
+            background: var(--blush-light);
             padding: 14px;
             border-radius: 50px;
-            color: var(--dusty-rose);
+            color: var(--rose-deep);
         }
 
         /* product sections */
@@ -215,7 +215,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            color: var(--deep-cocoa);
+            color: var(--charcoal-soft);
         }
         .section-desc {
             color: #8B6F69;
@@ -223,7 +223,7 @@
         }
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1.8rem;
         }
         .product-card {
@@ -241,7 +241,7 @@
             box-shadow: var(--shadow-hover);
         }
         .badge {
-            background: var(--golden-sand);
+            background: var(--gold-sand);
             display: inline-block;
             padding: 4px 12px;
             border-radius: 40px;
@@ -250,19 +250,19 @@
             margin-bottom: 1rem;
         }
         .product-img {
-            width: 160px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
             object-fit: cover;
             border-radius: 32px;
-            background: #faece6;
+            background: #FCF0EB;
             margin-bottom: 1rem;
             transition: 0.3s;
         }
         .product-card:hover .product-img { transform: scale(1.02); }
         .product-title { font-weight: 700; font-size: 1.1rem; margin: 0.5rem 0; }
-        .price { color: var(--dusty-rose); font-weight: 800; font-size: 1.2rem; margin: 0.4rem 0; }
+        .price { color: var(--rose-deep); font-weight: 800; font-size: 1.2rem; margin: 0.4rem 0; }
         .btn-add {
-            background: var(--soft-peach);
+            background: var(--blush-light);
             border: none;
             padding: 8px 22px;
             border-radius: 40px;
@@ -270,11 +270,11 @@
             transition: 0.2s;
             cursor: pointer;
         }
-        .btn-add:hover { background: var(--golden-sand); transform: scale(0.97); }
+        .btn-add:hover { background: var(--gold-sand); transform: scale(0.97); }
 
-        /* floating banner */
+        /* floating banner animation */
         .floating-banner {
-            background: linear-gradient(125deg, #F7ECE5, #FEF5EF);
+            background: linear-gradient(125deg, #FDF1EC, #FFF8F4);
             margin: 1.5rem 5%;
             border-radius: 48px;
             padding: 1.8rem;
@@ -282,14 +282,14 @@
             flex-wrap: wrap;
             align-items: center;
             gap: 1.5rem;
-            animation: floatSoft 4s infinite ease-in-out;
+            animation: floatGentle 4s infinite ease-in-out;
             box-shadow: var(--shadow-card);
         }
         .banner-text { flex: 1; }
-        .banner-text h3 { font-size: 1.5rem; color: var(--deep-cocoa); }
-        .banner-img img { max-width: 180px; border-radius: 32px; width: 100%; }
+        .banner-text h3 { font-size: 1.5rem; color: var(--rose-deep); }
+        .banner-img img { max-width: 200px; border-radius: 32px; width: 100%; }
 
-        /* gallery / lookbook */
+        /* gallery / lookbook with your image */
         .gallery {
             padding: 1.5rem 5%;
             text-align: center;
@@ -298,22 +298,22 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.2rem;
             margin-top: 1.5rem;
         }
         .gallery-grid img {
-            width: 130px;
-            height: 130px;
+            width: 140px;
+            height: 140px;
             object-fit: cover;
             border-radius: 28px;
             transition: 0.3s;
             box-shadow: 0 6px 12px rgba(0,0,0,0.05);
         }
-        .gallery-grid img:hover { transform: scale(1.04); }
+        .gallery-grid img:hover { transform: scale(1.05); }
 
         /* testimonial */
         .testimonials {
-            background: var(--soft-peach);
+            background: var(--blush-light);
             margin: 2rem 5%;
             border-radius: 48px;
             padding: 2rem;
@@ -335,7 +335,7 @@
 
         /* CTA Banner */
         .cta-banner {
-            background: var(--deep-cocoa);
+            background: var(--charcoal-soft);
             margin: 2rem 5%;
             border-radius: 48px;
             padding: 1.8rem;
@@ -346,7 +346,7 @@
             gap: 1rem;
             color: white;
         }
-        .cta-banner h3 { color: var(--golden-sand); font-size: 1.3rem; }
+        .cta-banner h3 { color: var(--gold-sand); font-size: 1.3rem; }
         .btn-wa {
             background: #25D366;
             border: none;
@@ -374,7 +374,7 @@
             z-index: 999;
             cursor: pointer;
             transition: 0.2s;
-            animation: pulseWa 2s infinite;
+            animation: pulseWA 2s infinite;
         }
         .whatsapp-float:hover { transform: scale(1.08); background: #1faa50; }
 
@@ -407,30 +407,27 @@
             .product-img { width: 140px; height: 140px; }
             .section-title { font-size: 1.6rem; }
             .gallery-grid img { width: 100px; height: 100px; }
-            .floating-banner .banner-img img { max-width: 140px; }
         }
-
         @media (max-width: 480px) {
-            .nav-links a { font-size: 0.75rem; white-space: nowrap; }
+            .nav-links a { font-size: 0.75rem; }
             .logo h1 { font-size: 1.3rem; }
-            .btn-primary { padding: 10px 20px; font-size: 0.85rem; }
-            .hero { padding: 1.5rem 4%; }
+            .btn-primary { padding: 10px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Announcement Bars -->
+    <!-- Announcement Bars with animation -->
     <div class="announce-top">
-        <div class="marquee-text">🌸 FREE SHIPPING ON ALL ORDERS | 15% OFF FIRST PURCHASE: BLOOM15 | BUY 2 GET 1 FREE 🌸 &nbsp;&nbsp;🌸 FREE SHIPPING ON ALL ORDERS | 15% OFF FIRST PURCHASE: BLOOM15 | BUY 2 GET 1 FREE 🌸</div>
+        <div class="marquee-text">✨ FREE SHIPPING ON ALL ORDERS | 15% OFF FIRST PURCHASE: BLOOM15 | BUY 2 GET 1 FREE ✨ &nbsp;&nbsp;✨ FREE SHIPPING ON ALL ORDERS | 15% OFF FIRST PURCHASE: BLOOM15 | BUY 2 GET 1 FREE ✨</div>
     </div>
     <div class="announce-second">
         ✨ BLOOM REWARDS: DOUBLE POINTS ON ALL SKINCARE + EXCLUSIVE BIRTHDAY GIFT ✨
     </div>
 
-    <!-- Sticky Navbar Fixed -->
+    <!-- Sticky Navbar -->
     <div class="navbar">
-        <div class="logo"><h1><i class="fas fa-flower"></i> Bloom Beauty</h1></div>
+        <div class="logo"><h1><i class="fas fa-flower"></i> Bloom & Co.</h1></div>
         <div class="nav-links">
             <a href="#">Shop</a>
             <a href="#">Skincare</a>
@@ -441,15 +438,15 @@
         <div class="cart-icon"><i class="fas fa-shopping-bag"></i> Cart</div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with your first image (Reana.pk) -->
     <div class="hero">
         <div class="hero-text">
-            <h2>Embrace Your Natural Glow</h2>
-            <p>Clean, vegan & sustainably crafted skincare and makeup that celebrates your unique beauty.</p>
+            <h2>Unveil Your Natural Radiance</h2>
+            <p>Luxury, vegan & sustainably crafted cosmetics for the modern minimalist. Clean beauty that performs.</p>
             <button class="btn-primary" id="shopNowBtn">Discover Collection →</button>
         </div>
         <div class="hero-image">
-            <img src="https://placehold.co/600x500/FDE9E1/C88A7A?text=Bloom+Cosmetics+Set&font=poppins" alt="Luxury Cosmetics Set">
+            <img src="https://reana.pk/cdn/shop/articles/Vogtlin-Instruments_520x500_81dbb486-3501-4097-ba9d-38abf9201b5f.jpg?v=1739190770" alt="Luxury Cosmetics">
         </div>
     </div>
 
@@ -461,52 +458,52 @@
         <div class="feature"><i class="fas fa-gem"></i><h4>Luxury Texture</h4><p>Silky finish</p></div>
     </div>
 
-    <!-- Best Sellers Grid -->
+    <!-- Best Sellers Grid (using your Shutterstock eyeshadow image as product) -->
     <div class="section-wrap">
-        <div class="section-title">✨ Best Sellers ✨</div>
+        <div class="section-title">✨ Iconic Best Sellers ✨</div>
         <div class="section-desc">Loved by thousands — your new holy grails</div>
         <div class="products-grid">
-            <div class="product-card"><div class="badge">⭐ BESTSELLER</div><img class="product-img" src="https://placehold.co/300x300/FDE9E1/C88A7A?text=Velvet+Lipstick&font=poppins" alt="Lipstick"><div class="product-title">Velvet Matte Lipstick</div><div class="price">$28.00</div><button class="btn-add">Add to Cart <i class="fas fa-arrow-right"></i></button></div>
-            <div class="product-card"><div class="badge">🌿 VIRAL</div><img class="product-img" src="https://placehold.co/300x300/FDE9E1/C88A7A?text=Glow+Serum&font=poppins" alt="Serum"><div class="product-title">Vitamin C Glow Serum</div><div class="price">$46.00</div><button class="btn-add">Add to Cart</button></div>
-            <div class="product-card"><div class="badge">💧 HYDRATING</div><img class="product-img" src="https://placehold.co/300x300/FDE9E1/C88A7A?text=Cloud+Cream&font=poppins" alt="Moisturizer"><div class="product-title">Cloud Dew Moisturizer</div><div class="price">$38.00</div><button class="btn-add">Add to Cart</button></div>
-            <div class="product-card"><div class="badge">✨ HIGHLIGHTER</div><img class="product-img" src="https://placehold.co/300x300/FDE9E1/C88A7A?text=Starlight+Palette&font=poppins" alt="Highlighter"><div class="product-title">Starlight Highlighter</div><div class="price">$34.00</div><button class="btn-add">Add to Cart</button></div>
+            <div class="product-card"><div class="badge">⭐ BESTSELLER</div><img class="product-img" src="https://www.shutterstock.com/image-photo/beautiful-palettes-eyeshadows-different-decorative-600nw-2736508389.jpg" alt="Eyeshadow Palette"><div class="product-title">Aurora Eyeshadow Palette</div><div class="price">$42.00</div><button class="btn-add">Add to Cart <i class="fas fa-arrow-right"></i></button></div>
+            <div class="product-card"><div class="badge">🌿 VIRAL</div><img class="product-img" src="https://media.ultainc.com/i/ulta/it-cosmetics_bn_m?w=1200&fmt=auto" alt="IT Cosmetics"><div class="product-title">Confidence in a Cream</div><div class="price">$48.00</div><button class="btn-add">Add to Cart</button></div>
+            <div class="product-card"><div class="badge">💧 HYDRATING</div><img class="product-img" src="https://essencemakeup.com/cdn/shop/files/260130_E_18934_1820x850_6ac17de6-629f-4241-bc7e-3fa35a094032.jpg?v=1773932013" alt="Essence Makeup"><div class="product-title">Luminous Glow Primer</div><div class="price">$24.00</div><button class="btn-add">Add to Cart</button></div>
+            <div class="product-card"><div class="badge">✨ HIGHLIGHTER</div><img class="product-img" src="https://plus.unsplash.com/premium_photo-1677526496597-aa0f49053ce2?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29zbWV0aWNzfGVufDB8fDB8fHww" alt="Highlighter"><div class="product-title">Starburst Highlighter</div><div class="price">$32.00</div><button class="btn-add">Add to Cart</button></div>
         </div>
     </div>
 
-    <!-- Floating Banner (animated) -->
+    <!-- Floating Banner with animation (using essence image as offer) -->
     <div class="floating-banner">
         <div class="banner-text">
-            <h3>🌸 Limited Edition: Bloom Mist 🌸</h3>
-            <p>Hydrating rose & hyaluronic acid facial mist. Get that glass-skin radiance instantly.</p>
-            <button class="btn-primary" style="background: var(--sage-green); color:#2D2A2A;">Shop Now →</button>
+            <h3>🌸 Limited Edition: Glass Skin Mist 🌸</h3>
+            <p>Hydrating rose & hyaluronic acid facial mist. Instant dew & radiance.</p>
+            <button class="btn-primary" style="background: var(--gold-sand); color:#2D2A2A;">Shop Now →</button>
         </div>
         <div class="banner-img">
-            <img src="https://placehold.co/300x300/FDE9E1/C88A7A?text=Rose+Mist&font=playfair" alt="Rose Mist">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnprm_pM9yaArujDXHzcDQhoA_qhP73h9d-w&s" alt="Special Edition Mist">
         </div>
     </div>
 
-    <!-- New Arrivals -->
+    <!-- New Arrivals (using your images again for consistency) -->
     <div class="section-wrap">
         <div class="section-title">🌸 New Arrivals 🌸</div>
         <div class="section-desc">Fresh drops, modern textures</div>
         <div class="products-grid">
-            <div class="product-card"><div class="badge">🆕 NEW</div><img class="product-img" src="https://placehold.co/300x300/FDE9E1/C88A7A?text=Peptide+Cleanser&font=poppins" alt="Cleanser"><div class="product-title">Peptide Jelly Cleanser</div><div class="price">$24.00</div><button class="btn-add">Add to Cart</button></div>
-            <div class="product-card"><div class="badge">✨ SHIMMER</div><img class="product-img" src="https://placehold.co/300x300/FDE9E1/C88A7A?text=Liquid+Shadow&font=poppins" alt="Eyeshadow"><div class="product-title">Liquid Aurora Shadow</div><div class="price">$22.00</div><button class="btn-add">Add to Cart</button></div>
-            <div class="product-card"><div class="badge">💄 LIP OIL</div><img class="product-img" src="https://placehold.co/300x300/FDE9E1/C88A7A?text=Glass+Lip+Oil&font=poppins" alt="Lip Oil"><div class="product-title">Glass Lip Oil</div><div class="price">$19.00</div><button class="btn-add">Add to Cart</button></div>
-            <div class="product-card"><div class="badge">🌙 OVERNIGHT</div><img class="product-img" src="https://placehold.co/300x300/FDE9E1/C88A7A?text=Repair+Serum&font=poppins" alt="Night Serum"><div class="product-title">Midnight Repair Serum</div><div class="price">$52.00</div><button class="btn-add">Add to Cart</button></div>
+            <div class="product-card"><div class="badge">🆕 NEW</div><img class="product-img" src="https://reana.pk/cdn/shop/articles/Vogtlin-Instruments_520x500_81dbb486-3501-4097-ba9d-38abf9201b5f.jpg?v=1739190770" alt="Luxury Skincare"><div class="product-title">Bloom Radiance Serum</div><div class="price">$58.00</div><button class="btn-add">Add to Cart</button></div>
+            <div class="product-card"><div class="badge">✨ SHIMMER</div><img class="product-img" src="https://www.shutterstock.com/image-photo/beautiful-palettes-eyeshadows-different-decorative-600nw-2736508389.jpg" alt="Eyeshadow"><div class="product-title">Chroma Liquid Shadow</div><div class="price">$22.00</div><button class="btn-add">Add to Cart</button></div>
+            <div class="product-card"><div class="badge">💄 LIP OIL</div><img class="product-img" src="https://media.ultainc.com/i/ulta/it-cosmetics_bn_m?w=1200&fmt=auto" alt="Lip Treatment"><div class="product-title">Silk Lip Oil</div><div class="price">$19.00</div><button class="btn-add">Add to Cart</button></div>
+            <div class="product-card"><div class="badge">🌙 OVERNIGHT</div><img class="product-img" src="https://essencemakeup.com/cdn/shop/files/260130_E_18934_1820x850_6ac17de6-629f-4241-bc7e-3fa35a094032.jpg?v=1773932013" alt="Night Cream"><div class="product-title">Midnight Repair Cream</div><div class="price">$52.00</div><button class="btn-add">Add to Cart</button></div>
         </div>
     </div>
 
-    <!-- Instagram Gallery -->
+    <!-- Instagram Gallery with Unsplash premium image -->
     <div class="gallery">
-        <h3><i class="fab fa-instagram"></i> #BloomBeauty • Real Glow Moments</h3>
+        <h3><i class="fab fa-instagram"></i> #BloomAndCo • Real Glow Moments</h3>
         <div class="gallery-grid">
-            <img src="https://placehold.co/200x200/FDE9E1/C88A7A?text=Glow+Look+1&font=poppins" alt="look1">
-            <img src="https://placehold.co/200x200/FDE9E1/C88A7A?text=Glow+Look+2&font=poppins" alt="look2">
-            <img src="https://placehold.co/200x200/FDE9E1/C88A7A?text=Glow+Look+3&font=poppins" alt="look3">
-            <img src="https://placehold.co/200x200/FDE9E1/C88A7A?text=Glow+Look+4&font=poppins" alt="look4">
-            <img src="https://placehold.co/200x200/FDE9E1/C88A7A?text=Glow+Look+5&font=poppins" alt="look5">
-            <img src="https://placehold.co/200x200/FDE9E1/C88A7A?text=Glow+Look+6&font=poppins" alt="look6">
+            <img src="https://plus.unsplash.com/premium_photo-1677526496597-aa0f49053ce2?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29zbWV0aWNzfGVufDB8fDB8fHww" alt="Glow Look">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnprm_pM9yaArujDXHzcDQhoA_qhP73h9d-w&s" alt="Beauty Routine">
+            <img src="https://reana.pk/cdn/shop/articles/Vogtlin-Instruments_520x500_81dbb486-3501-4097-ba9d-38abf9201b5f.jpg?v=1739190770" alt="Luxury Look">
+            <img src="https://www.shutterstock.com/image-photo/beautiful-palettes-eyeshadows-different-decorative-600nw-2736508389.jpg" alt="Palette">
+            <img src="https://media.ultainc.com/i/ulta/it-cosmetics_bn_m?w=1200&fmt=auto" alt="Skincare">
+            <img src="https://essencemakeup.com/cdn/shop/files/260130_E_18934_1820x850_6ac17de6-629f-4241-bc7e-3fa35a094032.jpg?v=1773932013" alt="Makeup Look">
         </div>
     </div>
 
@@ -514,13 +511,13 @@
     <div class="testimonials">
         <h3><i class="fas fa-comment-dots"></i> What Our Bloom Community Says</h3>
         <div class="testi-flex">
-            <div class="testi-card"><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><p>"The Velvet Matte lipstick is everything — smooth, pigmented and lasts all day!"</p><b>- Sophia L.</b></div>
-            <div class="testi-card"><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><p>"My skin feels brighter and healthier after using the C-Glow serum. Obsessed!"</p><b>- Priya K.</b></div>
-            <div class="testi-card"><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><i class="fas fa-star" style="color:#E4C4A8"></i><p>"Finally a clean beauty brand that performs. The highlighter is unreal!"</p><b>- Chloe M.</b></div>
+            <div class="testi-card"><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><p>"The Aurora palette is unreal — the pigments blend like a dream!"</p><b>- Sophia L.</b></div>
+            <div class="testi-card"><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><p>"Finally a clean brand that delivers visible results. My skin glows!"</p><b>- Priya K.</b></div>
+            <div class="testi-card"><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><i class="fas fa-star" style="color:#E2C7A2"></i><p>"Luxury texture and sustainable packaging — I'm a customer for life."</p><b>- Chloe M.</b></div>
         </div>
     </div>
 
-    <!-- CTA: Shopify Store + WhatsApp -->
+    <!-- CTA: Build Your Store + WhatsApp -->
     <div class="cta-banner">
         <div>
             <h3>✨ Ready to build your dream eCommerce store? ✨</h3>
@@ -530,25 +527,25 @@
     </div>
 
     <footer>
-        <p>© 2025 Bloom Beauty — Clean luxury for every skin. Cruelty-Free & Climate Positive.</p>
-        <p><i class="fas fa-envelope"></i> hello@bloombeauty.com &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> +1 (888) 567-9900</p>
+        <p>© 2025 Bloom & Co. — Clean luxury for every skin. Cruelty-Free & Climate Positive.</p>
+        <p><i class="fas fa-envelope"></i> hello@bloomandco.com &nbsp;|&nbsp; <i class="fab fa-whatsapp"></i> +1 (888) 567-9900</p>
     </footer>
 
-    <!-- WhatsApp Floating Button (Your Number) -->
+    <!-- WhatsApp Floating Button (Your Number: +923206708586) -->
     <div class="whatsapp-float" id="waFloat">
         <i class="fab fa-whatsapp"></i>
     </div>
 
     <script>
-        // Toast notification function
+        // Toast notification function for interactive feedback
         function showToastMessage(msg) {
             let toast = document.createElement('div');
             toast.innerText = msg;
             toast.style.position = 'fixed';
             toast.style.bottom = '95px';
             toast.style.right = '25px';
-            toast.style.backgroundColor = '#5E3A35';
-            toast.style.color = '#FFF5EF';
+            toast.style.backgroundColor = '#B25D4A';
+            toast.style.color = '#FFF8F4';
             toast.style.padding = '12px 24px';
             toast.style.borderRadius = '60px';
             toast.style.fontWeight = '500';
@@ -562,7 +559,7 @@
             }, 2100);
         }
 
-        // Add to cart buttons
+        // Add to cart event listeners with animation
         const allCartBtns = document.querySelectorAll('.btn-add');
         allCartBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -579,7 +576,7 @@
             });
         });
 
-        // Shop Now button scroll
+        // Shop Now button scroll to products
         const shopBtn = document.getElementById('shopNowBtn');
         if(shopBtn) {
             shopBtn.addEventListener('click', () => {
@@ -589,7 +586,7 @@
             });
         }
 
-        // WhatsApp functionality (your number: +923206708586)
+        // WhatsApp functionality with your number: +923206708586
         function openWhatsApp() {
             const phoneNumber = '+923206708586';
             const message = encodeURIComponent("Hello! I saw your beautiful cosmetics Shopify concept and I'm interested in having you build a complete eCommerce store for my brand. Let's discuss!");
@@ -602,10 +599,10 @@
         const waCta = document.getElementById('whatsappCtaBtn');
         if(waCta) waCta.addEventListener('click', openWhatsApp);
 
-        // gallery interactive
+        // Gallery images interactive feedback
         const galleryImages = document.querySelectorAll('.gallery-grid img');
         galleryImages.forEach(img => {
-            img.addEventListener('click', () => showToastMessage("📸 Follow @bloombeauty on IG for more!"));
+            img.addEventListener('click', () => showToastMessage("📸 Follow @bloomandco on IG for more!"));
         });
     </script>
 </body>
